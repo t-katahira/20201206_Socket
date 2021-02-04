@@ -24,8 +24,8 @@ namespace _20201206_Socket
         {
             InitializeComponent();
 
-            Uri uri = new Uri("/page1.xaml", UriKind.Relative);
-            frame.Source = uri;
+            //Uri uri = new Uri("/page1.xaml", UriKind.Relative);
+            //frame.Source = uri;
         }
     }
 }

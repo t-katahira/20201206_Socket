@@ -6,8 +6,49 @@
         xmlns:local="clr-namespace:_20201206_Socket"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <!--<Grid>
         <Image Name="image"/>
         <Frame Name="frame" NavigationUIVisibility="Hidden" />
-    </Grid>
+    </Grid>-->
+
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+          <RowDefinition Height="1*"/>
+          <RowDefinition Height="5*"/>
+          </Grid.RowDefinitions>
+
+          <!--タイトル-->
+          <TextBlock Text="Socket communication"
+                     FontSize="30" TextAlignment="Left" VerticalAlignment="Center"
+                     Margin="10,0" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" />
+
+          <!--左下-->
+          <Grid Grid.Column="0" Grid.Row="1">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+          </Grid.RowDefinitions>
+
+            <ListBox Name="ListaBox1" Grid.Row="0" SelectionMode="Single">
+              <ListBoxItem Content="Server" Selector.IsSelected="true"/>
+              <ListBoxItem Content="Client" />
+
+              <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                  <StackPanel Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+                
+              </ListBox.ItemsPanel>
+            </ListBox>
+              
+            
+          </Grid>
+          
+          
+        </Grid>
 </Window>
